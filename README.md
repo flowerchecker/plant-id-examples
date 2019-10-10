@@ -1,6 +1,6 @@
 [Plant.id](https://Plant.id) offers a plant identification service based on machine learning. Once you [obtain the API key](https://web.plant.id/plant-identification-api/) you can use these client's code to speed-up the development of your implementation. 
 
-# api-reference
+# API reference
  * [api.plant.id/identify](https://plantid.docs.apiary.io/#reference/0/identification/identify-plant) – sends plant photos to our backend, queue the request and returns it’s identificator
  * [api.plant.id/check-identifications](https://plantid.docs.apiary.io/#reference/0/check/check-identifications) – checks if identification has been already proceed and eventually returns the result of the identification
  
