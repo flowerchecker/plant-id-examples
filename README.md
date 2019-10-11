@@ -10,8 +10,8 @@ See https://plantid.docs.apiary.io for full reference.
 
 # Python example
 
-TBD
+See [python](https://github.com/Plant-id/plant-id-examples/blob/master/python/plant_id_client.py) file
 
-# Java example
+# Android/java example
 
-TBD
+See [android](https://github.com/Plant-id/plant-id-examples/tree/master/android) directory
