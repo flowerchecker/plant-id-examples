@@ -9,7 +9,7 @@ from time import sleep
 
 secret_access_key = '-- ask for one at business@plant.id --'
 
-def send_for_identificattion(file_names):
+def send_for_identification(file_names):
 	files_encoded = []
 	for file_name in file_names:
 		with open(file_name, 'rb') as file:
