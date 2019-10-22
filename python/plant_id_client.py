@@ -9,7 +9,7 @@ from time import sleep
 
 secret_access_key = '-- ask for one at business@plant.id --'
 
-def send_for_identification(file_names):
+def _identification(file_names):
 	files_encoded = []
 	for file_name in file_names:
 		with open(file_name, 'rb') as file:
@@ -32,7 +32,7 @@ def send_for_identification(file_names):
 	response = requests.post('https://plant.id/api/identify', json=params, headers=headers)
 
 	if response.status_code != 200:
-	    raise("send_for_identificattion error: {}".format(response.text))
+	    raise("send_for_identification error: {}".format(response.text))
 
 	# this reference allows you to gather the identification result (once its ready)
 	return response.json().get('id')
@@ -58,7 +58,7 @@ def get_suggestions(request_id):
 			return resp[0]["suggestions"]
 
 # more photos of the same plant increases the accuracy
-request_id = send_for_identificattion(['photo1.jpg','photo2.jpg'])
+request_id = send_for_identification(['photo1.jpg','photo2.jpg'])
 
 # just listing the suggested plant names here (without the certainty values)
 for suggestion in get_suggestions(request_id):
