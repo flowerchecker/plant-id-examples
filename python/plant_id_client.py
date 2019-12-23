@@ -1,7 +1,7 @@
 """
- The purpose of this code is to show how to work with plant.id API.
- You'll find API documentation at https://plant.id/api
- and https://plantid.docs.apiary.io
+The purpose of this code is to show how to work with plant.id API.
+You'll find API documentation at https://plant.id/api
+and https://plantid.docs.apiary.io
 """
 
 import base64
@@ -26,8 +26,8 @@ def send_for_identification(file_names):
         'key': secret_access_key,
         'parameters': ["crops_fast"]
         }
-    # see the docs for more optinal atrributes;
-    # for example 'custom_id' allows you to work with your own identifiers
+    # see the docs for more optional attributes
+    # for example 'custom_id' allows you to work with your custom identifiers
     headers = {
         'Content-Type': 'application/json'
     }
@@ -39,7 +39,7 @@ def send_for_identification(file_names):
         raise("send_for_identification error: {}".format(response.text))
 
     # this reference allows you to gather the identification result
-    # (once its ready)
+    # (once it is ready)
     return response.json().get('id')
 
 
@@ -54,9 +54,9 @@ def get_suggestions(request_id):
 
     # To keep it simple, we are pooling the API waiting for the server
     # to finish the identification.
-    # The better way would be to utilise "callback_url" parameter in /identify
-    # call to tell the our server to call your's server enpoint once
-    # the identificatin is done.
+    # The better way would be to utilize "callback_url" parameter in /identify
+    # call to tell our server to call your's server endpoint once
+    # the identification is done.
     while True:
         print("Waiting for suggestions...")
         sleep(5)
@@ -65,7 +65,7 @@ def get_suggestions(request_id):
         if resp[0]["suggestions"]:
             return resp[0]["suggestions"]
 
-# more photos of the same plant increases the accuracy
+# more photos of the same plant increase the accuracy
 request_id = send_for_identification(['photo1.jpg', 'photo2.jpg'])
 
 # just listing the suggested plant names here (without the certainty values)
