@@ -3,6 +3,7 @@
 # API reference
 ## Identification
 ```https://plant.id/api/identify```
+
 Sends plant photos to our backend, queue the request and returns its identification.
 
 ### Request
@@ -114,7 +115,7 @@ There is one required pamater:
 
 ### Response
 Example output:
-```json
+```
 {
   "active": True,
   "daily_limit": None,
@@ -147,7 +148,7 @@ There is one required pamater:
 - _(`plant parts` - currently not used)_
 
 Output example:
-```json
+```
 {
   "name": {
     "classes": ["Abelia", "Abelia grandiflora", ...],
