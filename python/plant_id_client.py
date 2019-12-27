@@ -12,6 +12,14 @@ from time import sleep
 secret_access_key = '-- ask for one at business@plant.id --'
 
 
+class SendForIdentificationError(Exception):
+    def __init__(self, m):
+        self.message = m
+
+    def __str__(self):
+        return self.message
+
+
 def send_for_identification(file_names):
     files_encoded = []
     for file_name in file_names:
@@ -26,6 +34,7 @@ def send_for_identification(file_names):
         'key': secret_access_key,
         'parameters': ["crops_fast"]
         }
+
     # see the docs for more optional attributes
     # for example 'custom_id' allows you to work with your custom identifiers
     headers = {
@@ -36,7 +45,7 @@ def send_for_identification(file_names):
                              headers=headers)
 
     if response.status_code != 200:
-        raise("send_for_identification error: {}".format(response.text))
+        raise SendForIdentificationError(response.text)
 
     # this reference allows you to gather the identification result
     # (once it is ready)
