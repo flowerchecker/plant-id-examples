@@ -1,41 +1,41 @@
-[Plant.id](https://Plant.id) offers a plant identification service based on machine learning. Once you [obtain the API key](https://web.plant.id/plant-identification-api/) you can use these client's code to speed-up the development of your implementation.
+[Plant.id](https://Plant.id) offers a plant identification service based on machine learning. Once you [obtain the API key](https://web.plant.id/plant-identification-api/), you can use these client's code to speed-up the development of your implementation.
 
 # API reference
 ## Identification
 ```https://plant.id/api/identify```
 
-Sends plant photos to our backend, queue the request and returns its identification.
+Sends plant photos to our backend, queues the request, and returns its identification.
 
 ### Request
-There are two required pamateres:
+There are two required parameters:
 - **`key`**- your [API key](https://web.plant.id/plant-identification-api/)
 - **`images`** - one ore more images of the plant you want to identify (string - base64 or a file)
 
 The list of optional parameters:
-- `custom_id` - identifier you can set for your own puprouse
+- `custom_id` - identifier you can set for your purpose
 <!--- `custom_url` - backlink, your web representation of this identification-->
-- `callback_url` - url where we POST results after identification is completed
+- `callback_url` - URL where we POST results after identification is completed
 - `latitude` - geographic coordinate (float)
 - `longitude` - geographic coordinate (float)
-- `parameters` - list of strings which specify the speed & accuracy of the identification (`crops_simple`, `crops_fast` - default, `crops_medium`) or allows dipslaying of similar images (`similar_images`)
-- `date` - time in milisecond (int)
+- `parameters` - list of strings which specify the speed & accuracy of the identification (`crops_simple`, `crops_fast` - default, `crops_medium`) or allows displaying of similar images (`similar_images`)
+- `date` - time in milliseconds (int)
 <!--- `week` - week in year (int)-->
 <!--- `usage_info` - info about API usage and limits, e. g. how many identifications letf (bool)-->
-- `wait_for_identification` - allow to wait some time for identification to finish (and avoid check_identifications call). If parameter is numerical it is interpreted as maximal waiting time in seconds (max. 20s). (bool, float, int)
-- `lang` - language code ([ISO 639-1](https://en.m.wikipedia.org/wiki/List_of_ISO_639-1_codes)) used for common names and urls of plants (default "en")
+- `wait_for_identification` - allow to wait some time for identification to finish (and avoid check_identifications call). If the parameter is numerical, it is interpreted as maximal waiting time in seconds (max. 20 s). (bool, float, int)
+- `lang` - language code ([ISO 639-1](https://en.m.wikipedia.org/wiki/List_of_ISO_639-1_codes)) used for common names and URLs of plants (default "en")
 
 
 ### Result
 The result is a list of records showing possible plant species (taxons). Each record contains:
 - `name` - the scientific name of the plant
 - `url` - link to Wikipedia or Google
-- `common_name` - common name of the plant
+- `common_name` - the common name of the plant
 - `probability` - certainty level that suggested plant is the one from the photo
 - `confidence` - certainty level of the whole identification
-- `similar_images` - representative images of the identified species carefully selected by the model so it resembles the input image
+- `similar_images` - representative images of the identified species carefully selected by the model, so it resembles the input image
 - `confirmed` - confirmation status
 
-Recod example:
+Record example:
 ```json
 {
   "id": 3010636,
@@ -75,17 +75,17 @@ When sending the check request, specify your API key and the list of given ids O
 - **`key`**- your [API key](https://web.plant.id/plant-identification-api/)
 - **`ids`** - list of ids provided by the identification response
 - **`custom_ids`** - list of ids provided by you in the identification request
-- `lang` - language code ([ISO 639-1](https://en.m.wikipedia.org/wiki/List_of_ISO_639-1_codes)) used for common names and urls of plants (default "en")
+- `lang` - language code ([ISO 639-1](https://en.m.wikipedia.org/wiki/List_of_ISO_639-1_codes)) used for common names and URLs of plants (default "en")
 
 ### Response
-You will get a list with info about your identifications with given ids. Apart from getting the info you sent with the indentification request and the identification result, you can get following:
+You get a list with info about your identifications with given ids. Apart from getting the info you sent with the identification request and the identification result, you can get the following:
 
 - `created` - when was the identification request created
 - `sent` - when was the request sent to identification
 - `classified` - when was the request classified
 <!--- `feedback`-->
 - `fail_cause` - cause of the failed identification
-- `countable` - wheter the identification meets the required properties to be countable according to SLA
+- `countable` - whether the identification meets the required properties to be countable according to SLA
 
 ## Confirm
 ```https://api.plant.id/confirm/SUGGESTION_ID```
@@ -93,16 +93,16 @@ You will get a list with info about your identifications with given ids. Apart f
 Confirm suggestion with `SUGGESTION_ID` and unconfirm all others. Use when your plant matches our identification.
 
 ### Request
-There is one required pamater:
+There is one required parameter:
 - **`key`**- your [API key](https://web.plant.id/plant-identification-api/)
 
 ## Unconfirm
 ```https://api.plant.id/unconfirm/SUGGESTION_ID```
 
-Unconfirm prevously confirmed suggestion with `SUGGESTION_ID`.
+Unconfirm previously confirmed suggestion with `SUGGESTION_ID`.
 
 ### Request
-There is one required pamater:
+There is one required parameter:
 - **`key`**- your [API key](https://web.plant.id/plant-identification-api/)
 
 ## Usage info
@@ -110,7 +110,7 @@ There is one required pamater:
 Get stats about your API key limits and usage.
 
 ### Request
-There is one required pamater:
+There is one required parameter:
 - **`key`**- your [API key](https://web.plant.id/plant-identification-api/)
 
 ### Response
@@ -139,12 +139,12 @@ Example output:
 Get the list of plants known by model.
 
 ### Request
-There is one required pamater:
+There is one required parameter:
 - **`key`**- your [API key](https://web.plant.id/plant-identification-api/)
 
 ### Response
-- `name` - plant names known by the model
-- `name_genus` - genera known by the model
+- `name` - plant names which are known by the model
+- `name_genus` - genera which are known by the model
 - _(`plant parts` - currently not used)_
 
 Output example:
