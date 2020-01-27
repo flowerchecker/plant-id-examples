@@ -1,4 +1,4 @@
-[Plant.id](https://Plant.id) offers a plant identification service based on machine learning. Once you [obtain the API key](https://web.plant.id/plant-identification-api/), you can use these client's code to speed-up the development of your implementation.
+[Plant.id](https://plant.id) offers a plant identification service based on machine learning. Once you [obtain the API key](https://web.plant.id/plant-identification-api/), you can use these client's code to speed-up the development of your implementation.
 
 # API reference
 ## Identification
@@ -86,6 +86,15 @@ You get a list with info about your identifications with given ids. Apart from g
 <!--- `feedback`-->
 - `fail_cause` - cause of the failed identification
 - `countable` - whether the identification meets the required properties to be countable according to SLA
+
+## Delete
+```https://api.plant.id/delete/IDENTIFICATION_ID```
+
+Delete identification with `IDENTIFICATION_ID`.
+
+### Request
+There is one required parameter:
+- **`key`**- your [API key](https://web.plant.id/plant-identification-api/)
 
 ## Confirm
 ```https://api.plant.id/confirm/SUGGESTION_ID```
