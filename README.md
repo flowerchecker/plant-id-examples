@@ -2,7 +2,7 @@
 
 # API reference
 ## Identification
-```https://plant.id/api/identify```
+```https://api.plant.id/identify```
 
 Sends plant photos to our backend, queues the request, and returns its identification.
 
@@ -65,7 +65,7 @@ Record example:
 ```
 
 ## Check
-```https://plant.id/api/check_identifications```
+```https://api.plant.id/check_identifications```
 
 Checks if identifications with given ids have been already proceeded and eventually returns their result.
 
