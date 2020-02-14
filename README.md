@@ -17,7 +17,7 @@ The list of optional parameters:
 - `callback_url` - URL where we POST results after identification is completed
 - `latitude` - geographic coordinate (float)
 - `longitude` - geographic coordinate (float)
-- `parameters` - list of strings which specify the speed & accuracy of the identification (`crops_simple`, `crops_fast` - default, `crops_medium`) or allows displaying of similar images (`similar_images`)
+- `parameters` - list of strings which specify the speed & accuracy of the identification (`crops_simple`, `crops_fast` - default, `crops_medium`) or allows displaying of similar images (`similar_images`) -> **If you want to get similar images in the response, you must include item `similar_images` here.
 - `date` - time in milliseconds (int)
 <!--- `week` - week in year (int)-->
 <!--- `usage_info` - info about API usage and limits, e. g. how many identifications letf (bool)-->
@@ -31,8 +31,7 @@ The result is a list of records showing possible plant species (taxons). Each re
 - `url` - link to Wikipedia or Google
 - `common_name` - the common name of the plant
 - `probability` - certainty level that suggested plant is the one from the photo
-- `confidence` - certainty level of the whole identification
-- `similar_images` - representative images of the identified species carefully selected by the model, so it resembles the input image
+- `similar_images` - representative images of the identified species carefully selected by the model, so it resembles the input image (Similar images are includede in the result only if you add the value `similar_image` in the `parameters` list of the reques.)
 - `confirmed` - confirmation status
 
 Record example:
