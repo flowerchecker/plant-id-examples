@@ -1,4 +1,4 @@
-[Plant.id](https://plant.id) offers a plant identification service based on machine learning. Once you [obtain the API key](https://web.plant.id/plant-identification-api/), you can use these client's code to speed-up the development of your implementation.
+[Plant.id](https://web.plant.id) offers a plant identification service based on machine learning. Once you [obtain the API key](https://web.plant.id/plant-identification-api/), you can use these client's code to speed-up the development of your implementation.
 
 # Plant.id API v2
 
@@ -11,10 +11,10 @@ Send plant photos to our back end, wait for identification, and return the resul
 ### Request
 Send POST request to: `https://api.plant.id/v2/identify`. Set the `Content-Type` to `"application/json"` in headers (or you can use `multipart/form-data`). Include following keys in the `param` json:
 
-- **`api_key`**- your [API key](https://web.plant.id/plant-identification-api/)
 - **`images`** - one or more images (encoded in base64) of the plant you want to identify
 
 Other optional keys:
+- `api_key`- your [API key](https://web.plant.id/plant-identification-api/) (if you are [authenticating with parameter](https://github.com/Plant-id/Plant-id-API/wiki/Authentication#passing-a-parameter-in-posted-data))
 - `modifiers` - list of strings: 
     - `"crops_simple"`/`"crops_fast"` (default)/`"crops_medium"` - specify the speed & accuracy of the identification
     - `"similar_images"` - allow displaying of similar images -> **If you want to get similar images in the response, you must include item `similar_images` here.**
@@ -39,4 +39,6 @@ The result contains a list of suggestions of possible plant species (taxons). Ea
 - and more (see the [Documentation](https://github.com/Plant-id/Plant-id-API/wiki/Synchronous-identification))
 
 ## Try it yourself!
-We prepared a simple code to demostrate how the API works. See the [Python example](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py)
+We prepared a simple code to demonstrate how the API works. See the [Python example](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py).
+
+Don't know how to code? Try it on [our website](https://plant.id/).
