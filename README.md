@@ -2,23 +2,26 @@
 
 # Plant.id API v2
 
+## Documentation
+See our [documentation](https://github.com/Plant-id/Plant-id-API/wiki) for full reference.
+
 ## Identify your plant
-Send plant photos to our back end, wait for identification, and return the result. If the identification takes more than the `identification_timeout`, return identification info without any suggestions.
+Send plant photos to our back end, wait for identification, and return the result.
 
 ### Request
-Send POST request to: `https://api.plant.id/v2/identify` and include following parameters:
+Send POST request to: `https://api.plant.id/v2/identify`. Set the `Content-Type` to `"application/json"` in headers (or you can use `multipart/form-data`). Include following keys in the `param` json:
 
 - **`api_key`**- your [API key](https://web.plant.id/plant-identification-api/)
-- **`images`** - one ore more images of the plant you want to identify (string - base64 or a file)
+- **`images`** - one or more images (encoded in base64) of the plant you want to identify
 
-Other optional parameters:
+Other optional keys:
 - `modifiers` - list of strings: 
     - `"crops_simple"`/`"crops_fast"` (default)/`"crops_medium"` - specify the speed & accuracy of the identification
     - `"similar_images"` - allow displaying of similar images -> **If you want to get similar images in the response, you must include item `similar_images` here.**
 - `plant_language` - language code ([ISO 639-1](https://en.m.wikipedia.org/wiki/List_of_ISO_639-1_codes)) used for `plant_details` (default `"en"`)
 - `plant_details` - list of strings, which determines which information about the plant will be included in the response (if the data is available)
     - `"common_names"` - list of common names of the plant in the language specified in `plant_language`
-    - `"url"` - link to page with the plant profile (usually Wikipedia)
+    - `"url"` - link to the page with the plant profile (usually Wikipedia)
     - `"name_authority"` - scientific name of the plant
     - `"wiki_description"` - description of the plant from Wikipedia with source url and license
     - `"taxonomy"` - dictionary with the plant taxonomy
@@ -30,13 +33,10 @@ The result contains a list of suggestions of possible plant species (taxons). Ea
 - `common_names` - list of common names of the plant (if available)
 - `url` - link to page with the plant profile (usually Wikipedia)
 - `wiki_description` - description of the plant from Wikipedia (if available)
-- `taxonomy` - taxonomy of the plant (if available)
+- `taxonomy` - a taxonomy of the plant (if available)
 - `probability` - certainty level that suggested plant is the one from the photo
-- `similar_images` - representative images of the identified species carefully selected by the model, so it resembles the input image (Similar images are included in the result only if you add the value `similar_image` in the `modifiers` list of the request.)
+- `similar_images` - representative images of the identified species which resemble the input image (Similar images are included in the result only if you add the value `similar_image` in the `modifiers` list of the request.)
 - and more (see the [Documentation](https://github.com/Plant-id/Plant-id-API/wiki/Synchronous-identification))
 
 ## Try it yourself!
-We prepared a simple code to demostrate, how the API works. See the [Python example](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py)
-
-## Documentation
-See our [documentation](https://github.com/Plant-id/Plant-id-API/wiki) for full reference.
+We prepared a simple code to demostrate how the API works. See the [Python example](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py)
