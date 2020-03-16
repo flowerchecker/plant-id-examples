@@ -3,42 +3,40 @@
 # Plant.id API v2
 
 ## Documentation
-See our [documentation](https://github.com/Plant-id/Plant-id-API/wiki) for full reference.
+See our [documentation](https://github.com/Plant-id/Plant-id-API/wiki) for the full reference.
 
-## Identify your plant
-Send plant photos to our back end, wait for identification, and return the result.
+## Simple Python example
+```python
+import base64
+import requests
 
-### Request
-Send POST request to: `https://api.plant.id/v2/identify`. Set the `Content-Type` to `"application/json"` in headers (or you can use `multipart/form-data`). Include following keys in the `param` json:
+# encode image to base64
+with open("unknown_plant.jpg", "rb") as file:
+    images = [base64.b64encode(file.read()).decode("ascii")]
 
-- **`images`** - one or more images (encoded in base64) of the plant you want to identify
+your_api_key = "fd3slj47dj... -- ask for one: https://forms.gle/yK1AY53YkYJjsc8X8 --"
+json_data = {
+    "images": images,
+    "modifiers": ["similar_images"],
+    "plant_details": ["common_names", "url", "wiki_description", "taxonomy"]
+}
 
-Other optional keys:
-- `api_key`- your [API key](https://web.plant.id/plant-identification-api/) (if you are [authenticating with parameter](https://github.com/Plant-id/Plant-id-API/wiki/Authentication#passing-a-parameter-in-posted-data))
-- `modifiers` - list of strings: 
-    - `"crops_simple"`/`"crops_fast"` (default)/`"crops_medium"` - specify the speed & accuracy of the identification
-    - `"similar_images"` - allow displaying of similar images -> **If you want to get similar images in the response, you must include item `similar_images` here.**
-- `plant_language` - language code ([ISO 639-1](https://en.m.wikipedia.org/wiki/List_of_ISO_639-1_codes)) used for `plant_details` (default `"en"`)
-- `plant_details` - list of strings, which determines which information about the plant will be included in the response (if the data is available)
-    - `"common_names"` - list of common names of the plant in the language specified in `plant_language`
-    - `"url"` - link to the page with the plant profile (usually Wikipedia)
-    - `"name_authority"` - scientific name of the plant
-    - `"wiki_description"` - description of the plant from Wikipedia with source url and license
-    - `"taxonomy"` - dictionary with the plant taxonomy
-- and more (see the [Documentation](https://github.com/Plant-id/Plant-id-API/wiki/Synchronous-identification))
+response = requests.post(
+    "https://api.plant.id/v2/identify",
+    json=jsodn_data,
+    headers={
+        "Content-Type": "application/json",
+        "Api-Key": your_api_key
+    }).json()
 
-### Response
-The result contains a list of suggestions of possible plant species (taxons). Each suggestion contains:
-- `scientific_name` - the scientific name of the plant
-- `common_names` - list of common names of the plant (if available)
-- `url` - link to page with the plant profile (usually Wikipedia)
-- `wiki_description` - description of the plant from Wikipedia (if available)
-- `taxonomy` - a taxonomy of the plant (if available)
-- `probability` - certainty level that suggested plant is the one from the photo
-- `similar_images` - representative images of the identified species which resemble the input image (Similar images are included in the result only if you add the value `similar_image` in the `modifiers` list of the request.)
-- and more (see the [Documentation](https://github.com/Plant-id/Plant-id-API/wiki/Synchronous-identification))
+for suggestion in response['suggestions']:
+    print(suggestion['plant_name'])    # Taraxacum officinale
+    print(suggestion['plant_details']['common_names'])    # ['dandelion']
+    print(suggestion['plant_details']['url'])    # https://en.wikipedia.org/wiki/Taraxacum_officinale
+```
 
-## Try it yourself!
-We prepared a simple code to demonstrate how the API works. See the [Python example](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py).
+## More examples
+- [Python example - synchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py).
+- [Python example - asynchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/async_identification_example.py).
 
 Don't know how to code? Try it on [our website](https://plant.id/).
