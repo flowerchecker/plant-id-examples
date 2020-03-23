@@ -39,4 +39,4 @@ for suggestion in response["suggestions"]:
 - [Python example - synchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py).
 - [Python example - asynchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/async_identification_example.py).
 
-Don't know how to code? Try it on [our website](https://plant.id/).
+Don't know how to code? Try the [online demo](https://plant.id/).
