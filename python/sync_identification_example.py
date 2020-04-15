@@ -23,7 +23,8 @@ def identify_plant(file_names):
                           "url",
                           "name_authority",
                           "wiki_description",
-                          "taxonomy"],
+                          "taxonomy",
+                          "synonyms"],
         }
 
     headers = {

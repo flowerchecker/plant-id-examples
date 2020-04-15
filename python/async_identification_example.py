@@ -45,7 +45,8 @@ def get_result(identification_id):
                           "url",
                           "name_authority,",
                           "wiki_description",
-                          "taxonomy"],
+                          "taxonomy",
+                          "synonyms"],
         }
 
     headers = {
