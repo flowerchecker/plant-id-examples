@@ -15,7 +15,7 @@ def identify_plant(file_names):
 
     # see the docs for more optional attributes
     params = {
-        "api_key": "-- ask for one: https://forms.gle/yK1AY53YkYJjsc8X8 --",
+        "api_key": "-- ask for one: https://web.plant.id/api-access-request/ --",
         "images": images,
         "modifiers": ["crops_fast", "similar_images"],
         "plant_language": "en",

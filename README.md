@@ -14,7 +14,7 @@ import requests
 with open("unknown_plant.jpg", "rb") as file:
     images = [base64.b64encode(file.read()).decode("ascii")]
 
-your_api_key = "fd3slj47dj... -- ask for one: https://forms.gle/yK1AY53YkYJjsc8X8 --"
+your_api_key = "fd3slj47dj... -- ask for one: https://web.plant.id/api-access-request/ --"
 json_data = {
     "images": images,
     "modifiers": ["similar_images"],

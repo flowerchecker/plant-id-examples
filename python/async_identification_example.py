@@ -3,7 +3,7 @@ import requests
 from time import sleep
 
 
-key = "-- ask for one: https://forms.gle/yK1AY53YkYJjsc8X8 --"
+key = "-- ask for one: https://web.plant.id/api-access-request/ --"
 
 
 def encode_files(file_names):

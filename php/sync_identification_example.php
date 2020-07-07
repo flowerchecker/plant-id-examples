@@ -8,7 +8,7 @@ function encodeImages($images){
 }
 function identifyPlants($file_names){
 	$encoded_images = encodeImages($file_names);
-	$api_key = "// ask for one: https://forms.gle/yK1AY53YkYJjsc8X8";
+	$api_key = "// ask for one: https://web.plant.id/api-access-request/";
 	$params = array(
 		"api_key" => $api_key,
 		"images" => $encoded_images,
