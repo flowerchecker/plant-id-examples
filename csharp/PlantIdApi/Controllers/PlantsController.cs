@@ -27,7 +27,29 @@ namespace PlantIdApi.Controllers
         {
             if (files.Length > 0)
             {
-                return "Uploaded: " + files.FileName;
+                try
+                {
+                    using (var client = new HttpClient())
+                    {
+                        client.BaseAddress = new Uri("https://api.plant.id/v2/");
+                        client.DefaultRequestHeaders.Accept.Clear();
+                        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                        HttpResponseMessage response = await client.GetAsync("identify");
+                        if (response.IsSuccessStatusCode)
+                        {
+                            return await response.Content.ReadAsStringAsync();
+                        }
+                        else
+                        {
+                            throw new ArgumentException("Unable to reach PlantId");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return ex.Message.ToString();
+                }
             }
             else
             {
