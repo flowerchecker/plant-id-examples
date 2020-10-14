@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-using PlantIdApi.Models;
 using Newtonsoft.Json.Linq;
 using System.Text;
 using System.IO;
@@ -63,42 +62,6 @@ namespace PlantIdApi.Controllers
                     var resultContent = await result.Content.ReadAsStringAsync();
 
                     return resultContent;
-
-                    /*
-                    client.BaseAddress = new Uri(_config.GetValue<string>("PlantIdUrl"));
-                    MultipartFormDataContent form = new MultipartFormDataContent();
-                    HttpContent content = new StringContent("fileToUpload");
-                    form.Add(content, "fileToUpload");
-
-                    var stream = files.OpenReadStream();
-                    content = new StreamContent(stream);
-
-                    content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
-                    {
-                        Name = "fileToUpload",
-                        FileName = files.Name
-                    };
-
-                    form.Add(content);
-
-                    var response = await client.PostAsync("identify", form);
-                    return response.Content.ReadAsStringAsync().Result;
-                    */
-
-                    // client.BaseAddress = new Uri(_config.GetValue<string>("PlantIdUrl"));
-                    // client.DefaultRequestHeaders.Accept.Clear();
-                    // client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-
-                    // HttpResponseMessage response = await client.GetAsync("identify");
-                    // if (response.IsSuccessStatusCode)
-                    // {
-                    //     return await response.Content.ReadAsStringAsync();
-                    // }
-                    // else
-                    // {
-                    //     throw new ArgumentException("Unable to reach PlantId endpoint");
-                    // }
                 }
             }
             catch (Exception ex)
