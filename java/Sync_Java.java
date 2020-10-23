@@ -54,16 +54,18 @@ public class Sync_Java {
 		String apiKey = "// ask for one: https://web.plant.id/api-access-request/";
 		
 		// read image from local file system and encode
-		String flower1 = base64EncodeFromFile("flower1.jpg");
-		String flower2 = base64EncodeFromFile("flower2.jpg");
-
+		String [] flowers = new String[] {"flower1.jpg", "flower2.jpg"};
+		
+		
 		JSONObject data = new JSONObject();
 		data.put("api_key", apiKey);
 
 		// add images
-		JSONArray images = new JSONArray()
-				.put(flower1)
-				.put(flower2);
+		JSONArray images = new JSONArray();
+		for(String filename : flowers) {
+			String fileData = base64EncodeFromFile(filename);
+			images.put(fileData);
+		}
 		data.put("images", images);
 
 		
