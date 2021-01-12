@@ -36,9 +36,12 @@ for suggestion in response["suggestions"]:
 ```
 
 ## More examples
-- [Python example - synchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py).
-- [Python example - asynchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/async_identification_example.py).
-- [PHP example](https://github.com/Plant-id/Plant-id-API/blob/master/php/sync_identification_example.php)
+- [Python example - synchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py)
+- [Python example - asynchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/async_identification_example.py)
+- [Java example](https://github.com/Plant-id/Plant-id-API/tree/master/java)
 - [JavaScript example](https://github.com/Plant-id/Plant-id-API/blob/master/javascript/sync_identification_example.html)
+- [node.js example](https://github.com/Plant-id/Plant-id-API/tree/master/node)
+- [PHP example](https://github.com/Plant-id/Plant-id-API/blob/master/php/sync_identification_example.php)
+- [Rust example](https://github.com/Plant-id/Plant-id-API/tree/master/rust/async)
 
 Don't know how to code? Try the [online demo](https://plant.id/).
