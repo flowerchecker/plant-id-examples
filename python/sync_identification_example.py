@@ -20,11 +20,16 @@ def identify_plant(file_names):
         "modifiers": ["crops_fast", "similar_images"],
         "plant_language": "en",
         "plant_details": ["common_names",
-                          "url",
+                          "edible_parts",
+                          "gbif_id",
                           "name_authority",
-                          "wiki_description",
+                          "propagation_methods",
+                          "synonyms",
                           "taxonomy",
-                          "synonyms"],
+                          "url",
+                          "wiki_description",
+                          "wiki_image"
+                         ],
         }
 
     headers = {
