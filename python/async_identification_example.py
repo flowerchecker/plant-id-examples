@@ -6,24 +6,19 @@ from time import sleep
 key = "-- ask for one: https://web.plant.id/api-access-request/ --"
 
 
-def encode_files(file_names):
-    files_encoded = []
-    for file_name in file_names:
-        with open(file_name, "rb") as file:
-            files_encoded.append(base64.b64encode(file.read()).decode("ascii"))
-    return files_encoded
+def encode_file(file_name):
+    with open(file_name, "rb") as file:
+        return base64.b64encode(file.read()).decode("ascii")
 
 
 def identify_plant(file_names):
-    images = encode_files(file_names)
-
     params = {
         "api_key": key,
-        "images": images,
+        "images": [encode_file(img) for img in file_names],
         "latitude": 49.1951239,
         "longitude": 16.6077111,
         "datetime": 1582830233,
-        "modifiers": ["crops_fast", "similar_images"],
+        "modifiers": ["crops_fast", "similar_images", "health_all"],
         }
 
     headers = {
@@ -42,11 +37,16 @@ def get_result(identification_id):
         "api_key": key,
         "plant_language": "en",
         "plant_details": ["common_names",
-                          "url",
-                          "name_authority,",
-                          "wiki_description",
+                          "edible_parts",
+                          "gbif_id"
+                          "name_authority",
+                          "propagation_methods",
+                          "synonyms",
                           "taxonomy",
-                          "synonyms"],
+                          "url",
+                          "wiki_description",
+                          "wiki_image",
+                          ],
         }
 
     headers = {
