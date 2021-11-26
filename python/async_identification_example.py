@@ -36,6 +36,7 @@ def get_result(identification_id):
     params = {
         "api_key": key,
         "plant_language": "en",
+        # plant details info: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
         "plant_details": ["common_names",
                           "edible_parts",
                           "gbif_id"

@@ -17,6 +17,7 @@ def identify_plant(file_names):
         "datetime": 1582830233,
         "modifiers": ["crops_fast", "similar_images", "health_all"],
         "plant_language": "en",
+        # plant details info: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
         "plant_details": ["common_names",
                           "edible_parts",
                           "gbif_id"

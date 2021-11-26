@@ -78,7 +78,8 @@ public class Sync_Java {
 		// add language
 		data.put("plant_language", "en");
 
-		// add details
+		// add plant details
+		// more info here: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
 		JSONArray plantDetails = new JSONArray()
 				.put("common_names")
 				.put("url")

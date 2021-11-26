@@ -10,6 +10,7 @@ const data = JSON.stringify({
     images: base64files,
     modifiers: ["crops_fast", "similar_images"],
     plant_language: "en",
+    /* plant details info: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details */
     plant_details: ["common_names",
         "url",
         "name_authority",
