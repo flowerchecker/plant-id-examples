@@ -35,6 +35,8 @@ for suggestion in response["suggestions"]:
     print(suggestion["plant_details"]["url"])    # https://en.wikipedia.org/wiki/Taraxacum_officinale
 ```
 
+See the [JSON response example](https://github.com/flowerchecker/Plant-id-API/wiki/Example:-Response-with-identification-result).
+
 ## More examples
 - [Python example - synchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/sync_identification_example.py)
 - [Python example - asynchronous](https://github.com/Plant-id/Plant-id-API/blob/master/python/async_identification_example.py)
