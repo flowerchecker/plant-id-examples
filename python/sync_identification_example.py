@@ -43,4 +43,4 @@ def identify_plant(file_names):
 
 
 if __name__ == '__main__':
-    print(identify_plant(["photo1.jpg", "photo2.jpg"]))
+    print(identify_plant(["../img/photo1.jpg", "../img/photo2.jpg", "../img/photo3.jpg"]))

@@ -54,7 +54,7 @@ public class Sync_Java {
 		String apiKey = "// ask for one: https://web.plant.id/api-access-request/";
 		
 		// read image from local file system and encode
-		String [] flowers = new String[] {"flower1.jpg", "flower2.jpg"};
+		String [] flowers = new String[] {"../img/photo1.jpg", "../img/photo2.jpg", "../img/photo3.jpg"};
 		
 		
 		JSONObject data = new JSONObject();
@@ -91,8 +91,4 @@ public class Sync_Java {
 
 		sendPostRequest("https://api.plant.id/v2/identify", data);
 	}
-	
-	
-
-	
 }

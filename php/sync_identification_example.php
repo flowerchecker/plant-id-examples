@@ -33,5 +33,5 @@ function identifyPlants($file_names){
 	curl_close($ch);
 	return $result;
 }
-print_r(identifyPlants(['photo1.jpg', 'photo2.jpg']));
+print_r(identifyPlants(['../img/photo1.jpg', '../img/photo2.jpg', '../img/photo3.jpg']));
 ?>
