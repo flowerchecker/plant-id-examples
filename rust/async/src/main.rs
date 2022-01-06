@@ -25,7 +25,8 @@ async fn main() {
         .json(&serde_json::json!({
             "api_key": "-- ask for one: https://web.plant.id/api-access-request/ --",
             "images": [base64img],
-            "modifiers": ["crops_fast", "similar_images"],
+            // modifiers info: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
+            "modifiers": ["crops_fast", "similar_images", "health_all", "disease_similar_images"],
             "plant_language": "en",
             // plant details info: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
             "plant_details": ["common_names",

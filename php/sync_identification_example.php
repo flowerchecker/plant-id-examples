@@ -12,7 +12,8 @@ function identifyPlants($file_names){
 	$params = array(
 		"api_key" => $api_key,
 		"images" => $encoded_images,
-		"modifiers" => ["crops_fast", "similar_images"],
+		// modifiers info: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
+		"modifiers" => ["crops_fast", "similar_images", "health_all", "disease_similar_images"],
 		"plant_language" => "en",
 		// plant details info: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
 		"plant_details" => array("common_names",

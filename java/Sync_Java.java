@@ -68,11 +68,13 @@ public class Sync_Java {
 		}
 		data.put("images", images);
 
-		
 		// add modifiers
+		// modifiers info: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
 		JSONArray modifiers = new JSONArray()
 				.put("crops_fast")
 				.put("similar_images");
+				.put("health_all");
+				.put("disease_similar_images");
 		data.put("modifiers", modifiers);
 
 		// add language

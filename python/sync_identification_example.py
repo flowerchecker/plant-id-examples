@@ -15,7 +15,8 @@ def identify_plant(file_names):
         "latitude": 49.1951239,
         "longitude": 16.6077111,
         "datetime": 1582830233,
-        "modifiers": ["crops_fast", "similar_images", "health_all"],
+        # modifiers info: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
+        "modifiers": ["crops_fast", "similar_images", "health_all", "disease_similar_images"],
         "plant_language": "en",
         # plant details info: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
         "plant_details": ["common_names",
