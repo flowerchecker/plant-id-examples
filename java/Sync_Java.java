@@ -91,6 +91,14 @@ public class Sync_Java {
 				.put("synonyms");
 		data.put("plant_details", plantDetails);
 
+		// add disease details
+		// disease details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details
+		JSONArray diseaseDetails = new JSONArray()
+				.put("common_names")
+				.put("url")
+				.put("description");
+		data.put("disease_details", diseaseDetails);
+
 		sendPostRequest("https://api.plant.id/v2/identify", data);
 	}
 }

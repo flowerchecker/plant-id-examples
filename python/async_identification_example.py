@@ -18,7 +18,7 @@ def identify_plant(file_names):
         "latitude": 49.1951239,
         "longitude": 16.6077111,
         "datetime": 1582830233,
-        # modifiers info: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
+        # modifiers docs: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
         "modifiers": ["crops_fast", "similar_images", "health_all", "disease_similar_images"],
         }
 
@@ -37,7 +37,7 @@ def get_result(identification_id):
     params = {
         "api_key": key,
         "plant_language": "en",
-        # plant details info: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
+        # plant details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
         "plant_details": ["common_names",
                           "edible_parts",
                           "gbif_id"
@@ -49,6 +49,8 @@ def get_result(identification_id):
                           "wiki_description",
                           "wiki_image",
                           ],
+        # disease details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details
+        "disease_details": ["common_names", "url", "description"]
         }
 
     headers = {

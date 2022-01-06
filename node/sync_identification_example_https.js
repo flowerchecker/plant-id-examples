@@ -17,7 +17,9 @@ const data = JSON.stringify({
         "name_authority",
         "wiki_description",
         "taxonomy",
-        "synonyms"]
+        "synonyms"],
+    /* disease details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details */
+    disease_details: ["common_names", "url", "description"]
 });
 
 const options = {

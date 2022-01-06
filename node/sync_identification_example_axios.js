@@ -8,16 +8,18 @@ const base64files = files.map(file => fs.readFileSync(file, 'base64'));
 const data = {
     api_key: "-- ask for one: https://web.plant.id/api-access-request/ --",
     images: base64files,
-    /* modifiers info: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers */
+    /* modifiers docs: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers */
     modifiers: ["crops_fast", "similar_images", "health_all", "disease_similar_images"],
     plant_language: "en",
-    /* plant details info: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details */
+    /* plant details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details */
     plant_details: ["common_names",
         "url",
         "name_authority",
         "wiki_description",
         "taxonomy",
-        "synonyms"]
+        "synonyms"],
+    /* disease details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details */
+    disease_details: ["common_names", "url", "description"]
 };
 
 axios.post('https://api.plant.id/v2/identify', data).then(res => {
