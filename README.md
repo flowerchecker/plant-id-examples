@@ -1,4 +1,4 @@
-[Plant.id](https://web.plant.id) offers a plant identification service based on machine learning. Once you [obtain the API key](https://web.plant.id/plant-identification-api/), you can use these client's code to speed-up the development of your implementation.
+[Plant.id](https://web.plant.id) offers a plant identification and [plant diseases identification](https://web.plant.id/plant-health-assessment/) API based on machine learning. Once you [obtain the API key](https://web.plant.id/plant-identification-api/), you can use these client's code to speed-up the development of your implementation.
 
 # Plant.id API v2
 
@@ -17,7 +17,7 @@ with open("unknown_plant.jpg", "rb") as file:
 your_api_key = "fd3slj47dj... -- ask for one: https://web.plant.id/api-access-request/ --"
 json_data = {
     "images": images,
-    "modifiers": ["similar_images"],
+    "modifiers": ["similar_images", "health_all"],
     "plant_details": ["common_names", "url", "wiki_description", "taxonomy"]
 }
 
