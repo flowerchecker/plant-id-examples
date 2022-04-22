@@ -1,0 +1,885 @@
+{
+   "id":250541,
+   "custom_id":null,
+   "meta_data":{
+      "latitude":null,
+      "longitude":null,
+      "date":"2022-04-11",
+      "datetime":"2022-04-11"
+   },
+   "uploaded_datetime":1649679753.060491,
+   "finished_datetime":1649679754.544245,
+   "images":[
+      {
+         "file_name":"e939d748131c4268b33f3bce67e829ea.jpg",
+         "url":"https://staging.plant.id/media/images/e939d748131c4268b33f3bce67e829ea.jpg"
+      }
+   ],
+   "modifiers":[
+      "disease_similar_images",
+      "health_only"
+   ],
+   "secret":"Hn7...Q3Z",
+   "fail_cause":null,
+   "countable":true,
+   "feedback":null,
+   "is_plant_probability":0.999824345,
+   "is_plant":true,
+   "health_assessment":{
+      "is_healthy_probability":0.11249713499999991,
+      "is_healthy":false,
+      "diseases":[
+         {
+            "entity_id":456,
+            "name":"abiotic",
+            "probability":0.8812629195,
+            "redundant":true,
+            "similar_images":[
+               {
+                  "id":"6019f286ea314130898a7eccbc011ce7",
+                  "similarity":0.35322799808153865,
+                  "url":"https://plant...11ce7.jpg",
+                  "url_small":"https://plant...11ce7.small.jpg"
+               },
+               {
+                  "id":"4f4c9f23e5e844bca0bca33b106df1fe",
+                  "similarity":0.31670296768175343,
+                  "url":"https://plant...f1fe.jpg",
+                  "url_small":"https://plant...f1fe.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  
+               ],
+               "common_names":[
+                  "abiotic disorder",
+                  "physiological plant disorder"
+               ],
+               "description":"Abiotic disorders ....",
+               "treatment":{
+                  "prevention":[
+                     "Choose a ....",
+                     "Grow plants ....",
+                     "Grow less ...."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Physiological_plant_disorder",
+               "local_name":"abiotic",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":941,
+            "name":"water-related issue",
+            "probability":0.755133271,
+            "redundant":true,
+            "similar_images":[
+               {
+                  "id":"8c4f6e0396e34ffc8edc3838dd3855b0",
+                  "similarity":0.32370444036413903,
+                  "url":"https://plant...55b0.jpg",
+                  "url_small":"https://plant...55b0.small.jpg"
+               },
+               {
+                  "id":"0a006fc5499c4f97be23be94fb686a41",
+                  "similarity":0.2883316909054816,
+                  "url":"https://plant...6a41.jpg",
+                  "url_small":"https://plant...6a41.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic"
+               ],
+               "common_names":null,
+               "description":"Water-related abiotic ...",
+               "treatment":{
+                  "biological":[
+                     "Maintain....",
+                     "Replant the ...",
+                     "Select appropriate ....",
+                     "Temporarily move ..."
+                  ],
+                  "prevention":[
+                     "Avoid ...",
+                     "Grow less ..."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Houseplant_care#Water_requirement",
+               "local_name":"water-related issue",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":899,
+            "name":"water excess or uneven watering",
+            "probability":0.6154770555,
+            "similar_images":[
+               {
+                  "id":"89a28ad7ab4248ddb45626227b394026",
+                  "similarity":0.33341763538604297,
+                  "url":"https://plant...4026.jpg",
+                  "url_small":"https://plant...4026.small.jpg"
+               },
+               {
+                  "id":"6bc8144cc00d46e49510fba143c1353c",
+                  "similarity":0.3130629863192067,
+                  "url":"https://plant...353c.jpg",
+                  "url_small":"https://plant...353c.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic",
+                  "water-related issue"
+               ],
+               "common_names":[
+                  "overwatering"
+               ],
+               "description":"Water excess ....",
+               "treatment":{
+                  "biological":[
+                     "Maintain ...",
+                     "Select ...",
+                     "Temporarily move ..."
+                  ],
+                  "prevention":[
+                     "Improve ...",
+                     "Avoid ...",
+                     "Grow less ..."
+                  ]
+               },
+               "url":"https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/pests-and-problems/environmental/overwatering.aspx",
+               "local_name":"water excess or uneven watering",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":943,
+            "name":"nutrient-related issue",
+            "probability":0.4984011945,
+            "redundant":true,
+            "similar_images":[
+               {
+                  "id":"9927567af7424129aba947e6211e078c",
+                  "similarity":0.28816101056024934,
+                  "url":"https://plant...078c.jpg",
+                  "url_small":"https://plant...078c.small.jpg"
+               },
+               {
+                  "id":"6fffbb436ec941daaf047a3903c26db0",
+                  "similarity":0.25261827550331506,
+                  "url":"https://plant...6db0.jpg",
+                  "url_small":"https://plant...6db0.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic"
+               ],
+               "common_names":[
+                  "nutritional disease"
+               ],
+               "description":"Nutrient-related ...",
+               "treatment":{
+                  "biological":[
+                     "Replant the ..."
+                  ],
+                  "prevention":[
+                     "Change the ...",
+                     "Choose ..."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Plant_nutrition",
+               "local_name":"nutrient-related issue",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":801,
+            "name":"nutrient deficiency",
+            "probability":0.4895347355000001,
+            "similar_images":[
+               {
+                  "id":"438d7b2d9bb0469aa1f05b893e176e53",
+                  "similarity":0.3297521982187643,
+                  "url":"https://plant...6e53.jpg",
+                  "url_small":"https://plant...6e53.small.jpg"
+               },
+               {
+                  "id":"9fc0ce0d5e7d47a68671f7f33b80e2e8",
+                  "similarity":0.2593445683880853,
+                  "url":"https://plant...e2e8.jpg",
+                  "url_small":"https://plant...2e8.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic",
+                  "nutrient-related issue"
+               ],
+               "common_names":null,
+               "description":"Nutrient deficiency ...",
+               "treatment":{
+                  "biological":[
+                     "Add ...",
+                     "Replant the ..."
+                  ],
+                  "chemical":[
+                     "Apply ...",
+                     "Apply ..."
+                  ],
+                  "prevention":[
+                     "Supply ...",
+                     "Change the ...",
+                     "Choose ..."
+                  ]
+               },
+               "url":"https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/pests-and-problems/environmental/nutrients.aspx",
+               "local_name":"nutrient deficiency",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":907,
+            "name":"water deficiency",
+            "probability":0.26092337050000003,
+            "similar_images":[
+               {
+                  "id":"61137afa784e40b083873fb699b35db0",
+                  "similarity":0.2875578570364563,
+                  "url":"https://plant...5db0.jpg",
+                  "url_small":"https://plant...5db0.small.jpg"
+               },
+               {
+                  "id":"0753f3682bf948159cac75f7b234c09d",
+                  "similarity":0.24435083771634947,
+                  "url":"https://plant...c09d.jpg",
+                  "url_small":"https://plant...c09d.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic",
+                  "water-related issue"
+               ],
+               "common_names":[
+                  "drought"
+               ],
+               "description":"Water deficiency ...",
+               "treatment":{
+                  "biological":[
+                     "Maintain ...",
+                     "For potted ...",
+                     "Replant the ...",
+                     "Temporarily move ..."
+                  ],
+                  "chemical":[
+                     "You may ..."
+                  ],
+                  "prevention":[
+                     "Mulch ...",
+                     "Replant the ...",
+                     "Grow more ..."
+                  ]
+               },
+               "url":"https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/pests-and-problems/environmental/drought.aspx",
+               "local_name":"water deficiency",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":793,
+            "name":"mechanical damage",
+            "probability":0.169991687,
+            "similar_images":[
+               {
+                  "id":"671db62f127445c0bb7232485d3f8477",
+                  "similarity":0.36289768967920655,
+                  "url":"https://plant...8477.jpg",
+                  "url_small":"https://plant...8477.small.jpg"
+               },
+               {
+                  "id":"221df5ede9394f4f9f9f140f436a8c29",
+                  "similarity":0.3535428592307021,
+                  "url":"https://plant...8c29.jpg",
+                  "url_small":"https://plant...8c29.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic"
+               ],
+               "common_names":[
+                  "mechanical injury"
+               ],
+               "description":"Mechanical ...",
+               "treatment":{
+                  "biological":[
+                     "If possible ...",
+                     "For trees..."
+                  ],
+                  "prevention":[
+                     "Consider if ...",
+                     "Be careful ...",
+                     "For trees..."
+                  ]
+               },
+               "url":"https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/pests-and-problems/environmental/mechanical.aspx",
+               "local_name":"mechanical damage",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":786,
+            "name":"root rot",
+            "probability":0.0524275899,
+            "similar_images":[
+               {
+                  "id":"80b71496ebbc452baad26423a73a7de7",
+                  "similarity":0.4561881705805448,
+                  "url":"https://plant...7de7.jpg",
+                  "url_small":"https://plant...7de7.small.jpg"
+               },
+               {
+                  "id":"5ff429318487408aa18f79fc65b82827",
+                  "similarity":0.3259591994900992,
+                  "url":"https://plant...2827.jpg",
+                  "url_small":"https://plant...2827.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic",
+                  "water-related issue"
+               ],
+               "common_names":null,
+               "description":"Root rot ...",
+               "treatment":{
+                  "biological":[
+                     "Replant the ...",
+                     "In the ...",
+                     "If the ...",
+                     "Temporarily move ..."
+                  ],
+                  "chemical":[
+                     "If necessary..."
+                  ],
+                  "prevention":[
+                     "Improve ..",
+                     "Avoid ...",
+                     "Improve ...",
+                     "Grow less ...",
+                     "Disinfect ..."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Root_rot",
+               "local_name":"root rot",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":1082,
+            "name":"senescence",
+            "probability":0.045263454300000006,
+            "similar_images":[
+               {
+                  "id":"b540b3fde48a4fc8a1aa56700e34d6bd",
+                  "similarity":0.3611578842312591,
+                  "url":"https://plant...d6bd.jpg",
+                  "url_small":"https://plant...d6bd.small.jpg"
+               },
+               {
+                  "id":"bbc91199611f428cb4d8ac5b8752dca4",
+                  "similarity":0.31413167239009865,
+                  "url":"https://plant...dca4.jpg",
+                  "url_small":"https://plant...dca4.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  
+               ],
+               "common_names":[
+                  "aging"
+               ],
+               "description":"Senescence is ...",
+               "treatment":{
+                  "biological":[
+                     "Remove ..."
+                  ],
+                  "prevention":[
+                     "Prevent ..."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Plant_senescence",
+               "local_name":"senescence",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":923,
+            "name":"nutrient excess",
+            "probability":0.0444969535,
+            "similar_images":[
+               {
+                  "id":"81a28299d6af4b028d34e19399637632",
+                  "similarity":0.3978709784357089,
+                  "url":"https://plant...7632.jpg",
+                  "url_small":"https://plant...7632.small.jpg"
+               },
+               {
+                  "id":"1648a7f659f348b99102d4391fbe1802",
+                  "similarity":0.35314900368106006,
+                  "url":"https://plant...1802.jpg",
+                  "url_small":"https://plant...1802.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic",
+                  "nutrient-related issue"
+               ],
+               "common_names":[
+                  "nutrient toxicity"
+               ],
+               "description":"Some of ...",
+               "treatment":{
+                  "biological":[
+                     "Remove excess ...",
+                     "Check the ..."
+                  ],
+                  "prevention":[
+                     "Avoid ..."
+                  ]
+               },
+               "url":null,
+               "local_name":"nutrient excess",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":942,
+            "name":"light-related issue",
+            "probability":0.043160364,
+            "redundant":true,
+            "similar_images":[
+               {
+                  "id":"d3496defcd2749128962771b1aab3d64",
+                  "similarity":0.3716190953667289,
+                  "url":"https://plant...3d64.jpg",
+                  "url_small":"https://plant...3d64.small.jpg"
+               },
+               {
+                  "id":"717981a9dd3c4626859ddc3c52a9a10a",
+                  "similarity":0.3635130515310409,
+                  "url":"https://plant...a10a.jpg",
+                  "url_small":"https://plant...a10a.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic"
+               ],
+               "common_names":null,
+               "description":"A light-related issue ...",
+               "treatment":{
+                  "biological":[
+                     "Provide the ..."
+                  ],
+                  "prevention":[
+                     "Grow less ..."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Grow_light#Light_requirements_of_plants",
+               "local_name":"light-related issue",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":459,
+            "name":"Bacteria",
+            "probability":0.035619273800000004,
+            "similar_images":[
+               {
+                  "id":"a812b80542674dd1963afd22c465ea7d",
+                  "similarity":0.44409894985503673,
+                  "url":"https://plant...ea7d.jpg",
+                  "url_small":"https://plant...ea7d.small.jpg"
+               },
+               {
+                  "id":"d43f57fdeacb447a8bd325eb51a0a808",
+                  "similarity":0.28919300829744093,
+                  "url":"https://plant...a808.jpg",
+                  "url_small":"https://plant...a808.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  
+               ],
+               "common_names":null,
+               "description":"Bacterial infections ...",
+               "treatment":{
+                  "biological":[
+                     "If possible ..."
+                  ],
+                  "chemical":[
+                     "If necessary..."
+                  ],
+                  "prevention":[
+                     "Use resistant ...",
+                     "Disinfect ...",
+                     "Maintain ...",
+                     "Avoid ...",
+                     "Use healthy..."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Bacteria",
+               "local_name":"Bacteria",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":457,
+            "name":"Animalia",
+            "probability":0.033922299700000005,
+            "redundant":true,
+            "similar_images":[
+               {
+                  "id":"5432fb2a52b94c69a3ea6a1d7c7b5364",
+                  "similarity":0.2145572258673089,
+                  "url":"https://plant...5364.jpg",
+                  "url_small":"https://plant...5364.small.jpg"
+               },
+               {
+                  "id":"0d0cc155b80f4490854b646eb76c4df2",
+                  "similarity":0.2093506729523027,
+                  "url":"https://plant...4df2.jpg",
+                  "url_small":"https://plant...4df2.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  
+               ],
+               "common_names":[
+                  "pests"
+               ],
+               "description":"Disorders induced ...",
+               "treatment":{
+                  "biological":[
+                     "Remove pests ...",
+                     "Apply ...",
+                     "Introduce ...",
+                     "Isolate the ..."
+                  ],
+                  "chemical":[
+                     "If necessary..."
+                  ],
+                  "prevention":[
+                     "Encourage the ...",
+                     "Apply ...",
+                     "Inspect ..."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Animal",
+               "local_name":"Animalia",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":838,
+            "name":"feeding damage by insects",
+            "probability":0.031842440400000005,
+            "redundant":true,
+            "similar_images":[
+               {
+                  "id":"890ddc5a4893496c85911fb385e5870c",
+                  "similarity":0.27597327160745616,
+                  "url":"https://plant...870c.jpg",
+                  "url_small":"https://plant...870c.small.jpg"
+               },
+               {
+                  "id":"82f8fcfec7b4467c866b0ec0a83eb1cd",
+                  "similarity":0.27521935360035243,
+                  "url":"https://plant...b1cd.jpg",
+                  "url_small":"https://plant...b1cd.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "Animalia",
+                  "Insecta"
+               ],
+               "common_names":null,
+               "description":"Feeding damage ...",
+               "treatment":{
+                  "biological":[
+                     "Apply ...",
+                     "Introduce ...",
+                     "Isolate the ..."
+                  ],
+                  "chemical":[
+                     "If necessary..."
+                  ],
+                  "prevention":[
+                     "Encourage the ...",
+                     "Apply ...",
+                     "Inspect new ..."
+                  ]
+               },
+               "url":"https://gardeningsolutions.ifas.ufl.edu/care/pests-and-diseases/pests/management/different-pests-different-damage.html",
+               "local_name":"feeding damage by insects",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":1118,
+            "name":"sap-sucking pests",
+            "probability":0.0288028121,
+            "similar_images":[
+               {
+                  "id":"41db3b4ab6e34374ac94ef9d4d85d6a4",
+                  "similarity":0.3030338320788988,
+                  "url":"https://plant...d6a4.jpg",
+                  "url_small":"https://plant...d6a4.small.jpg"
+               },
+               {
+                  "id":"890ddc5a4893496c85911fb385e5870c",
+                  "similarity":0.27597327160745616,
+                  "url":"https://plant...870c.jpg",
+                  "url_small":"https://plant...870c.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "Animalia",
+                  "Insecta",
+                  "feeding damage by insects"
+               ],
+               "common_names":null,
+               "description":"Group of ...",
+               "treatment":{
+                  "biological":[
+                     "Apply ...",
+                     "Introduce ...",
+                     "Isolate the ..."
+                  ],
+                  "chemical":[
+                     "If necessary..."
+                  ],
+                  "prevention":[
+                     "Encourage the ...",
+                     "Apply ...",
+                     "Inspect ..."
+                  ]
+               },
+               "url":null,
+               "local_name":"sap-sucking pests",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":910,
+            "name":"thrips",
+            "probability":0.028646811799999998,
+            "similar_images":[
+               {
+                  "id":"51284068939d4a729f328b2c824ba5ee",
+                  "similarity":0.355126494796126,
+                  "url":"https://plant...a5ee.jpg",
+                  "url_small":"https://plant...a5ee.small.jpg"
+               },
+               {
+                  "id":"8b947ab11cfe47d1bbc2e171d85a57de",
+                  "similarity":0.3395608421495043,
+                  "url":"https://plant...57de.jpg",
+                  "url_small":"https://plant...57de.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":"Thysanoptera",
+                "classification":[
+                  "Animalia",
+                  "Insecta"
+               ],
+               "common_names":null,
+               "description":"Thrips are ...",
+               "treatment":{
+                  "biological":[
+                     "Remove pests ...",
+                     "Apply ...",
+                     "Introduce ..."
+                  ],
+                  "chemical":[
+                     "If necessary..."
+                  ],
+                  "prevention":[
+                     "Encourage the ...",
+                     "Quarantine ...",
+                     "Maintain ..."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Thrips",
+               "local_name":"thrips",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":465,
+            "name":"Insecta",
+            "probability":0.0240045786,
+            "redundant":true,
+            "similar_images":[
+               {
+                  "id":"9f08effde25a4e26a62f3d5efb1213bb",
+                  "similarity":0.3541280038283442,
+                  "url":"https://plant...13bb.jpg",
+                  "url_small":"https://plant...13bb.small.jpg"
+               },
+               {
+                  "id":"092176d6c7ad43cb94e9b9de53769f09",
+                  "similarity":0.3355367662180084,
+                  "url":"https://plant...9f09.jpg",
+                  "url_small":"https://plant...9f09.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "Animalia"
+               ],
+               "common_names":[
+                  "insects"
+               ],
+               "description":"Class Insecta ...",
+               "treatment":{
+                  "biological":[
+                     "Remove ...",
+                     "Apply ...",
+                     "Introduce ...",
+                     "Isolate the ..."
+                  ],
+                  "chemical":[
+                     "If necessary...",
+                     "Choose ..."
+                  ],
+                  "prevention":[
+                     "Encourage the ...",
+                     "Apply ...",
+                     "Inspect ..."
+                  ]
+               },
+               "url":"https://en.wikipedia.org/wiki/Insect",
+               "local_name":"Insecta",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":900,
+            "name":"light or heat source damage",
+            "probability":0.0239548534,
+            "similar_images":[
+               {
+                  "id":"59dbe64673bb4319818d8afc14bb7ac3",
+                  "similarity":0.2965442126630846,
+                  "url":"https://plant...7ac3.jpg",
+                  "url_small":"https://plant...7ac3.small.jpg"
+               },
+               {
+                  "id":"ac8f9dde479943e1a99de5f4c99edbe8",
+                  "similarity":0.2641839866074899,
+                  "url":"https://plant...dbe8.jpg",
+                  "url_small":"https://plant...dbe8.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic",
+                  "light-related issue"
+               ],
+               "common_names":null,
+               "description":"Exposition to ...",
+               "treatment":{
+                  "biological":[
+                     "Inspect the ...",
+                     "If possible ...",
+                     "Shade the ..."
+                  ],
+                  "prevention":[
+                     "When ...",
+                     "Choose ..."
+                  ]
+               },
+               "url":null,
+               "local_name":"light or heat source damage",
+               "language":"en"
+            }
+         },
+         {
+            "entity_id":964,
+            "name":"light excess",
+            "probability":0.0226061195,
+            "similar_images":[
+               {
+                  "id":"fdfc1b49622e4260a63669892ded0d16",
+                  "similarity":0.38126038978260324,
+                  "url":"https://plant...0d16.jpg",
+                  "url_small":"https://plant...0d16.small.jpg"
+               },
+               {
+                  "id":"cb546c344542494288b4ffb27dd66555",
+                  "similarity":0.3634241747814033,
+                  "url":"https://plant...6555.jpg",
+                  "url_small":"https://plant...6555.small.jpg"
+               }
+            ],
+            "disease_details":{
+                "cause":null,
+                "classification":[
+                  "abiotic",
+                  "light-related issue"
+               ],
+               "common_names":null,
+               "description":"Too much ...",
+               "treatment":{
+                  "biological":[
+                     "Move the ...",
+                     "Shade the ...",
+                     "Do not ...",
+                     "For trees..."
+                  ],
+                  "prevention":[
+                     "Learn the ...",
+                     "Grow less ...",
+                     "Grow the ...",
+                     "For trees...",
+                     "For trees..."
+                  ]
+               },
+               "url":null,
+               "local_name":"light excess",
+               "language":"en"
+            }
+         }
+      ]
+   }
+}
