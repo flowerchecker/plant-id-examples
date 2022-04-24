@@ -14,23 +14,20 @@ Send us your plant images encoded in base64, and get a list of possible species 
 import base64
 import requests
 
-# encode image to base64
+# encode images to base64
 with open("unknown_plant.jpg", "rb") as file:
     images = [base64.b64encode(file.read()).decode("ascii")]
 
-your_api_key = "fd3slj47dj... -- ask for one: https://web.plant.id/api-access-request/ --"
-json_data = {
-    "images": images,
-    "modifiers": ["similar_images"],
-    "plant_details": ["common_names", "url"]
-}
-
 response = requests.post(
     "https://api.plant.id/v2/identify",
-    json=json_data,
+    json={
+        "images": images,
+        "modifiers": ["similar_images"],
+        "plant_details": ["common_names", "url"],
+    },
     headers={
         "Content-Type": "application/json",
-        "Api-Key": your_api_key
+        "Api-Key": "-- ask for one: https://web.plant.id/api-access-request/ --",
     }).json()
 
 for suggestion in response["suggestions"]:
@@ -49,23 +46,20 @@ Send us your ill plant photos encoded in base64, and get a list of possible heal
 import base64
 import requests
 
-# encode image to base64
+# encode images to base64
 with open("ill_plant.jpg", "rb") as file:
     images = [base64.b64encode(file.read()).decode("ascii")]
 
-your_api_key = "fd3slj47dj... -- ask for one: https://web.plant.id/api-access-request/ --"
-json_data = {
-    "images": images,
-    "modifiers": ["similar_images"],
-    "disease_details": ["description", "treatment"]
-}
-
 response = requests.post(
     "https://api.plant.id/v2/health_assessment",
-    json=json_data,
+    json={
+        "images": images,
+        "modifiers": ["similar_images"],
+        "disease_details": ["description", "treatment"],
+    },
     headers={
         "Content-Type": "application/json",
-        "Api-Key": your_api_key
+        "Api-Key": "-- ask for one: https://web.plant.id/api-access-request/ --",
     }).json()
 
 if not response["health_assessment"]["is_healthy"]:
