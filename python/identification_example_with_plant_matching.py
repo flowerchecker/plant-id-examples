@@ -1,7 +1,7 @@
 import re
 from typing import Iterable, Union
 
-from sync_identification_example import identify_plant
+from plant_identification_example import identify_plant
 
 
 class PlantMatcher:
