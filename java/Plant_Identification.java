@@ -9,7 +9,7 @@ import java.util.Base64;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class Sync_Java {
+public class Plant_Identification {
 	
 	/*
 	 *
