@@ -73,8 +73,6 @@ public class Sync_Java {
 		JSONArray modifiers = new JSONArray()
 				.put("crops_fast")
 				.put("similar_images");
-				.put("health_all");
-				.put("disease_similar_images");
 		data.put("modifiers", modifiers);
 
 		// add language
@@ -90,14 +88,6 @@ public class Sync_Java {
 				.put("taxonomy")
 				.put("synonyms");
 		data.put("plant_details", plantDetails);
-
-		// add disease details
-		// disease details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details
-		JSONArray diseaseDetails = new JSONArray()
-				.put("common_names")
-				.put("url")
-				.put("description");
-		data.put("disease_details", diseaseDetails);
 
 		sendPostRequest("https://api.plant.id/v2/identify", data);
 	}

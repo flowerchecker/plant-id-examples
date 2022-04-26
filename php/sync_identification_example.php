@@ -13,7 +13,7 @@ function identifyPlants($file_names){
 		"api_key" => $api_key,
 		"images" => $encoded_images,
 		// modifiers docs: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
-		"modifiers" => ["crops_fast", "similar_images", "health_all", "disease_similar_images"],
+		"modifiers" => ["crops_fast", "similar_images"],
 		"plant_language" => "en",
 		// plant details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
 		"plant_details" => array("common_names",
@@ -22,8 +22,6 @@ function identifyPlants($file_names){
 							"wiki_description",
 							"taxonomy",
 							"synonyms"),
-		// disease details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details
-        "disease_details" => array("common_names", "url", "description"),
 		);
 	$params = json_encode($params);
 	$ch = curl_init();

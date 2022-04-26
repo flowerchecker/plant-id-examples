@@ -9,7 +9,7 @@ const data = JSON.stringify({
     api_key: "-- ask for one: https://web.plant.id/api-access-request/ --",
     images: base64files,
     /* modifiers info: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers */
-    modifiers: ["crops_fast", "similar_images", "health_all", "disease_similar_images"],
+    modifiers: ["crops_fast", "similar_images"],
     plant_language: "en",
     /* plant details info: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details */
     plant_details: ["common_names",
@@ -18,8 +18,6 @@ const data = JSON.stringify({
         "wiki_description",
         "taxonomy",
         "synonyms"],
-    /* disease details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details */
-    disease_details: ["common_names", "url", "description"]
 });
 
 const options = {
