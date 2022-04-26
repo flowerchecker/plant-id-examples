@@ -15,7 +15,7 @@ function identifyPlants($file_names){
 		// modifiers docs: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
 		"modifiers" => ["crops_fast", "similar_images"],
 		"language" => "en",
-		// plant details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
+		// disease details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details
 		"disease_details" => array("cause",
 							"common_names",
 							"classification",

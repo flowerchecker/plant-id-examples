@@ -8,7 +8,7 @@ def encode_file(file_name):
 
 
 def identify_plant(file_names):
-    # More optional parameters: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-identification
+    # More optional parameters: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-Health-Assessment
     params = {
         "images": [encode_file(img) for img in file_names],
         "latitude": 49.1951239,

@@ -78,8 +78,8 @@ public class Health_Assessment {
 		// add language
 		data.put("language", "en");
 
-		// add plant details
-		// more info here: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
+		// add disease details
+		// more info here: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details
 		JSONArray diseaseDetails = new JSONArray()
 				.put("cause")
 				.put("common_names")
