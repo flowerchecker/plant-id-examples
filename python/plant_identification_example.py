@@ -20,7 +20,7 @@ def identify_plant(file_names):
         # Plant details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Plant-details
         "plant_details": ["common_names",
                           "edible_parts",
-                          "gbif_id"
+                          "gbif_id",
                           "name_authority",
                           "propagation_methods",
                           "synonyms",
