@@ -20,7 +20,7 @@ def identify_plant(file_names):
         # Disease details docs: https://github.com/flowerchecker/Plant-id-API/wiki/Disease-details
         "disease_details": ["cause",
                           "common_names",
-                          "classification"
+                          "classification",
                           "description",
                           "treatment",
                           "url",
