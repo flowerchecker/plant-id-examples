@@ -20,7 +20,10 @@ def encode_file(file_path: Path) -> str:
 def extract_exif(file_path: Path):
     """Extract EXIF data from a file."""
 
-    image = Image(file_path)
+    try:
+        image = Image(file_path)
+    except Exception:
+        return None, None, None
     if image.has_exif:
         dt = image.get('datetime_original', None)
         if dt:
@@ -63,8 +66,8 @@ def process_dir(dir_path: Path, api_key: str):
         writer = csv.writer(f, delimiter=',')
         writer.writerow(['file_name', 'date', 'latitude', 'longitude', 'plant_name', 'probability'])
         for file_path in sorted(dir_path.iterdir()):
-            print('processing:', file_path)
             if file_path.is_file() and file_path.suffix in ['.jpg', '.jpeg', '.png']:
+                print('processing:', file_path)
                 result = identify_from_file(file_path, api_key)
                 writer.writerow(
                     [
