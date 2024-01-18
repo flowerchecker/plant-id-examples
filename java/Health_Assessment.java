@@ -54,7 +54,7 @@ public class Health_Assessment {
 		String apiKey = "// ask for one: https://web.plant.id/api-access-request/";
 		
 		// read image from local file system and encode
-		String [] flowers = new String[] {"../img/photo1.jpg", "../img/photo2.jpg", "../img/photo3.jpg"};
+		String [] flowers = new String[] {"../images/photo1.jpg", "../images/photo2.jpg", "../images/photo3.jpg"};
 		
 		
 		JSONObject data = new JSONObject();

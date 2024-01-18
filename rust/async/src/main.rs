@@ -9,7 +9,7 @@ use serde_json::{Value};
 #[tokio::main]
 async fn main() {
     // Read image and convert to hex
-    let path = Path::new("../img/photo1.jpg");
+    let path = Path::new("../images/photo1.jpg");
     let mut file = File::open(&path).unwrap();
     let mut buffer = Vec::new();
     let _out = file.read_to_end(&mut buffer);

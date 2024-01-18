@@ -7,7 +7,7 @@ from exif import Image
 import csv
 
 DIRECTORY = './images'
-API_KEY = '... your_api_key ...'
+API_KEY = 'your_api_key'
 
 
 def encode_file(file_path: Path) -> str:
@@ -44,17 +44,17 @@ def identify_from_file(file_path: Path, api_key: str) -> dict:
     dt, longitude, latitude = extract_exif(file_path)
     params = {
         'images': [encode_file(file_path)],
-        'datetime': int(dt.timestamp()) if dt else None,
         'longitude': longitude,
         'latitude': latitude,
     }
+    if dt:
+        params['datetime'] = str(dt)
 
     headers = {
-        'Content-Type': 'application/json',
         'Api-Key': api_key,
     }
 
-    response = requests.post('https://api.plant.id/v2/identify', json=params, headers=headers)
+    response = requests.post('https://api.plant.id/v3/identification', json=params, headers=headers)
     assert response.status_code < 300, response.text
     return response.json()
 
@@ -72,11 +72,11 @@ def process_dir(dir_path: Path, api_key: str):
                 writer.writerow(
                     [
                         file_path.name,
-                        result['meta_data']['datetime'],
-                        result['meta_data']['latitude'],
-                        result['meta_data']['longitude'],
-                        result['suggestions'][0]['plant_name'],
-                        result['suggestions'][0]['probability'],
+                        result['input']['datetime'],
+                        result['input']['latitude'],
+                        result['input']['longitude'],
+                        result['result']['classification']['suggestions'][0]['name'],
+                        result['result']['classification']['suggestions'][0]['probability'],
                     ],
                 )
 

@@ -1,7 +1,7 @@
 const axios = require('axios')
 var fs = require('fs');
 
-const files = ['../img/photo1.jpg', '../img/photo2.jpg', '../img/photo3.jpg'];
+const files = ['../images/photo1.jpg', '../images/photo2.jpg', '../images/photo3.jpg'];
 
 const base64files = files.map(file => fs.readFileSync(file, 'base64'));
 
