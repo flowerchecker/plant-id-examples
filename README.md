@@ -80,3 +80,21 @@ for suggestion in identification.result.disease.suggestions:
     print()
 ```
 
+## Conversation 🤖 💬
+
+Chat about identification with ChatBot. ChatBot support multiple backends and its configuration can be modified.
+
+```Python
+from kindwise import PlantApi, MessageType
+
+api = PlantApi('your_api_key')
+conversation = api.ask_question('plant identification', 'Is this plant edible?')
+
+for message in conversation.messages:
+    if message.type == MessageType.ANSWER:
+        print(f'App: {message.content}')
+    else:
+        print(f'Client: {message.content}')
+    print()
+print('Feedback:', conversation.feedback.get('rating'))
+```
