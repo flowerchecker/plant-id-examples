@@ -1,8 +1,9 @@
 from kindwise import PlantApi
 
-# suggestion_filter - dict (optional) in format {"classification": "FILTER_NAME (filter examples below)"}
-# Restricts the output of the model to specified list of classes (region or plant type) and adjusts the probabilities.
-# The lists can be combined with logical operators and parentheses. The lists are available https://plant.id/suggestion_filters.
+# suggestion_filter - dict (optional) in format {"classification": "FILTER_NAME (filter examples below)"} Restricts
+# the output of the model to specified list of classes (region or plant type) and adjusts the probabilities. The
+# lists can be combined with logical operators and parentheses. The lists are available
+# https://plant.id/suggestion_filters.
 #
 # Examples:
 # Vegetables - {"classification": "vegetable"}

@@ -1,8 +1,8 @@
 import requests
 
 
-#Search plant knowledge base by query. Plants are searchable by scientific names, common names (in specified language), synonyms.
-#Plant name and query are always matched from start of a word., i.e. "Aloe vera" is searchable by "Aloe", "Alo", "Vera", "ver", "Aloe vera"...
+# Search plant knowledge base by query. Plants are searchable by scientific names, common names (in specified language), synonyms.
+# Plant name and query are always matched from start of a word., i.e. "Aloe vera" is searchable by "Aloe", "Alo", "Vera", "ver", "Aloe vera"...
 
 
 plant_for_search = 'aloe vera'
