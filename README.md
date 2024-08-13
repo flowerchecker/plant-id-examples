@@ -6,7 +6,7 @@ Once you [register and obtain the API key](https://admin.kindwise.com/signup), y
 
  - **[documentation](https://plant.id/docs)** - full API reference
  - **[python SDK](https://github.com/flowerchecker/kindwise-api-client)** - simply use API from pyhon
- - documentation on **[Postman](https://www.postman.com/winter-shadow-932363/workspace/kindwise/collection/24599534-c4a4048d-ed97-4532-8980-3159ddbfe629)**
+ - API specification on **[Postman](https://www.postman.com/winter-shadow-932363/workspace/kindwise/collection/24599534-c4a4048d-ed97-4532-8980-3159ddbfe629)**
  - try [online demo](https://plant.id/)
  - more [python examples](python)
 
