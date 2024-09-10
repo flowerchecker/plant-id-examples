@@ -1,16 +1,16 @@
 from kindwise import PlantApi
 
-# suggestion_filter - dict (optional) in format {"classification": "FILTER_NAME (filter examples below)"} Restricts
-# the output of the model to specified list of classes (region or plant type) and adjusts the probabilities. The
-# lists can be combined with logical operators and parentheses. The lists are available
+# suggestion_filter - str (optional) or dict (optional) in format {'classification': 'FILTER_NAME (filter examples
+# below)'} Restricts the output of the model to specified list of classes (region or plant type) and adjusts the
+# probabilities. The lists can be combined with logical operators and parentheses. The lists are available
 # https://plant.id/suggestion_filters.
 #
 # Examples:
-# Vegetables - {"classification": "vegetable"}
-# Houseplants and wild plants in Europe - {"classification": "houseplant OR continent__europe"}
-# Trees in Europe and North America - {"classification": "(continent__northern_america OR continent__europe) AND tree"}
+# Vegetables - 'vegetable'
+# Houseplants and wild plants in Europe - 'houseplant OR continent__europe'
+# Trees in Europe and North America - '(continent__northern_america OR continent__europe) AND tree'
 
-suggestion_filter = {'classification': '(continent__northern_america OR continent__australasia) AND Succulent'}
+suggestion_filter = '(continent__northern_america OR continent__australasia) AND Succulent'
 api = PlantApi('your_api_key')
 identification = api.identify(
     '../images/unknown_plant.jpg',
